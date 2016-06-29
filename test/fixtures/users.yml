@@ -1,0 +1,57 @@
+
+admin:
+  email: admin@admin.com
+  username: admin
+  university_id: 1
+  role: <%= User.roles[:admin] %>
+  encrypted_password: <%= Devise.bcrypt(User, 'password') %>
+
+instructor:
+  email: inst@inst.com
+  username: instructor
+  university_id: 1
+  role: <%= User.roles[:instructor] %>
+  encrypted_password: <%= Devise.bcrypt(User, 'password') %>
+
+instructor2:
+  email: inst2@inst.com
+  username: instructor2
+  university_id: 1
+  role: <%= User.roles[:instructor] %>
+  encrypted_password: <%= Devise.bcrypt(User, 'password') %>
+
+ta:
+  email: ta@ta.com
+  username: ta
+  university_id: 1
+  role: <%= User.roles[:ta] %>
+  encrypted_password: <%= Devise.bcrypt(User, 'password') %>
+
+student:
+  email: student@student.com
+  username: student
+  university_id: 1
+  role: <%= User.roles[:student] %>
+  encrypted_password: <%= Devise.bcrypt(User, 'password') %>
+
+student2:
+  email: student2@student.com
+  username: student2
+  university_id: 1
+  role: <%= User.roles[:student] %>
+  encrypted_password: <%= Devise.bcrypt(User, 'password') %>
+
+student3:
+  email: student3@student.com
+  username: student3
+  university_id: 1
+  role: <%= User.roles[:student] %>
+  encrypted_password: <%= Devise.bcrypt(User, 'password') %>
+
+instructor_sfu:
+  email: inst_sfu@inst_sfu.com
+  username: instructor_sfu
+  university_id: 2
+  role: <%= User.roles[:instructor] %>
+  encrypted_password: <%= Devise.bcrypt(User, 'password') %>
+

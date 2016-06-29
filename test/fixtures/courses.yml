@@ -1,0 +1,22 @@
+
+one:
+  title: Chem 100
+  access_code: <%= SecureRandom.hex(10) %>
+  university_id: 1
+
+two:
+  title: Chem 200
+  access_code: <%= SecureRandom.hex(10) %> 
+
+three:
+  title: Chem 300
+  access_code: <%= SecureRandom.hex(10) %> 
+
+inactive:
+  title: Chem 400 Inactive
+  active: false 
+  access_code: <%= SecureRandom.hex(10) %>
+
+full_report_testing:
+  title: For testing an entire course report
+  access_code: <%= SecureRandom.hex(10) %>

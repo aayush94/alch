@@ -1,0 +1,153 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ongoing:
+  status: <%= ShowingSession.statuses[:ongoing] %>
+  showing: active_showing
+  node: two
+  user: student
+  attempts_remaining: 5
+
+ongoing_with_failure:
+  status: <%= ShowingSession.statuses[:ongoing] %>
+  showing: complete_showing
+  node_id: 123
+  user: student
+  attempts_remaining: 5
+
+ongoing_student_session_for_expired_showing:
+  status: <%= ShowingSession.statuses[:ongoing] %>
+  showing: expired_showing
+  node_id: 123
+  user: student
+  attempts_remaining: 5
+
+completed_student_session_for_expired_showing:
+  status: <%= ShowingSession.statuses[:completed] %>
+  showing: expired_showing
+  user: student
+  attempts_remaining: 5
+
+failed_student_session_for_expired_showing:
+  status: <%= ShowingSession.statuses[:failed] %>
+  showing: expired_showing
+  user: student
+  attempts_remaining: 5
+
+ongoing_instructor_session_for_expired_showing:
+  status: <%= ShowingSession.statuses[:ongoing] %>
+  showing: expired_showing
+  user: instructor
+  node_id: 1
+  attempts_remaining: 5
+
+instructor_ongoing:
+  status: <%= ShowingSession.statuses[:ongoing] %>
+  showing: complete_showing
+  node_id: 123
+  user: instructor
+  attempts_remaining: 5
+
+to_be_success:
+  status: <%= ShowingSession.statuses[:ongoing] %>
+  showing: active_showing_3
+  node: one
+  user: student
+  attempts_remaining: 5
+
+practice_to_be_success:
+  status: <%= ShowingSession.statuses[:ongoing] %>
+  showing: active_showing_3_practice
+  node: one
+  user: student
+  attempts_remaining: 5
+
+instructor_to_be_success:
+  status: <%= ShowingSession.statuses[:ongoing] %>
+  showing: active_showing_3
+  node: one
+  user: instructor
+  attempts_remaining: 5
+
+practice_session:
+  status: <%= ShowingSession.statuses[:ongoing] %>
+  showing: non_graded_showing
+  node: success_node
+  user: student
+  attempts_remaining: 5
+
+justify_session:
+  status: <%= ShowingSession.statuses[:ongoing] %>
+  showing: justify_showing
+  node: require_justify_node
+  user: student
+  attempts_remaining: 5
+
+at_failure_session:
+  status: <%= ShowingSession.statuses[:ongoing] %>
+  showing: failure_showing
+  node: failure_node
+  user: student
+  attempts_remaining: 5
+
+report_session_1:
+  status: <%= ShowingSession.statuses[:ongoing] %>
+  showing: report_showing
+  node: complete_scenario_root
+  user: student
+  attempts_remaining: 5
+
+report_session_2:
+  status: <%= ShowingSession.statuses[:ongoing] %>
+  showing: report_showing
+  node: complete_scenario_root
+  user: student2
+  attempts_remaining: 5
+
+##############################
+####COURSE REPORT TESTING#####
+##############################
+
+course_report_session_1:
+  status: <%= ShowingSession.statuses[:completed] %>
+  showing: course_report_showing
+  node: complete_scenario_goal
+  user: student
+  attempts_remaining: 5
+
+course_report_session_2:
+  status: <%= ShowingSession.statuses[:failed] %>
+  showing: course_report_showing
+  node: complete_scenario_failure
+  user: student2
+  attempts_remaining: 0
+
+course_report_session_3:
+  status: <%= ShowingSession.statuses[:ongoing] %>
+  showing: course_report_showing
+  node: complete_scenario_root
+  user: student3
+  attempts_remaining: 4
+
+course_report_session_4:
+  status: <%= ShowingSession.statuses[:completed] %>
+  showing: course_report_showing_2
+  node: complete_scenario_goal
+  user: student
+  attempts_remaining: 3
+
+course_report_session_5:
+  status: <%= ShowingSession.statuses[:failed] %>
+  showing: course_report_showing_2
+  node: complete_scenario_failure
+  user: student2
+  attempts_remaining: 0
+
+course_report_session_6:
+  status: <%= ShowingSession.statuses[:completed] %>
+  showing: course_report_showing
+  node: complete_scenario_goal
+  user: instructor
+  attempts_remaining: 5
+
+
+

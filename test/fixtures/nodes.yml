@@ -1,0 +1,211 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  body: MyText
+  is_start: false
+  is_goal: false
+  is_failure: false
+  requires_justification: false
+  scenario: one
+
+two:
+  title: MyStringTwo
+  body: MyTextTwo
+  is_start: false
+  is_goal: false
+  is_failure: false
+  requires_justification: false
+  scenario: one
+
+three:
+  id: 3
+  title: MyString
+  body: MyText
+  is_start: false
+  is_goal: false
+  is_failure: false
+  requires_justification: false
+  scenario: two
+
+four:
+  title: MyString
+  body: MyText
+  is_start: false
+  is_goal: false
+  is_failure: false
+  requires_justification: false
+  scenario: two
+
+five:
+  title: five
+  body: highfive
+  is_start: false
+  is_goal: false
+  is_failure: false
+  requires_justification: false
+  scenario: one
+
+six:
+  title: six
+  body: six
+  is_start: false
+  is_goal: false
+  is_failure: false
+  requires_justification: false
+  scenario: one
+
+start_node:
+  id: 1
+  title: Cool Starting Place
+  body: Yeah let's start here why not
+  is_start: true
+  is_goal: false
+  is_failure: false
+  requires_justification: false
+  scenario: one
+
+success_node:
+  title: Absolute success
+  body: Yeah let's start here why not
+  is_start: false
+  is_goal: true
+  is_failure: false
+  requires_justification: false
+  scenario: one
+
+failure_node:
+  title: I am a failure
+  body: Yeah let's start here why not
+  is_start: false
+  is_goal: false
+  is_failure: true
+  requires_justification: false
+  scenario: one
+
+require_justify_node:
+  title: iJustify
+  body: Yeah let's start here why not
+  is_start: false
+  is_goal: false
+  is_failure: false
+  requires_justification: true
+  scenario: one
+
+with_five_choices:
+  title: I have five choices.
+  body: You wish you had this many choices
+  is_start: false
+  is_goal: false
+  is_failure: false
+  requires_justification: true
+  scenario: another_ubc_scenario
+
+locked_scenario_node:
+  title: Unlock my heart
+  body: Oh yeahhhh
+  is_start: true
+  is_goal: false
+  is_failure: false
+  requires_justification: true
+  scenario: locked
+
+#######################
+###COMPLETE SCENARIO###
+#######################
+
+complete_scenario_root:
+  id: 123
+  is_start: true
+  is_goal: false
+  is_failure: false
+  scenario: complete_scenario
+  label: 1
+
+complete_scenario_goal:
+  is_start: false
+  is_goal: true
+  is_failure: false
+  scenario: complete_scenario
+  label: 2
+
+complete_scenario_failure:
+  is_start: false
+  is_goal: false
+  is_failure: true
+  scenario: complete_scenario
+  label: 3
+
+#######################
+###MISSING GOAL #######
+#######################
+
+missing_goal_root:
+  is_start: true
+  is_goal: false
+  is_failure: false
+  scenario: missing_goal
+
+#######################
+###ORPHAN NODES #######
+#######################
+
+orphan_nodes_root:
+  is_start: true
+  is_goal: false
+  is_failure: false
+  scenario: orphan_nodes
+
+orphan_nodes_goal:
+  is_start: false
+  is_goal: true
+  is_failure: false
+  scenario: orphan_nodes
+
+#######################
+###INCOMPLETE CHOICES #
+#######################
+
+incomplete_choices_root:
+  is_start: true
+  is_goal: false
+  is_failure: false
+  scenario: incomplete_choices
+
+#######################
+###INCOMPLETE CHOICES #
+#######################
+
+unlabeled_choices_root:
+  is_start: true
+  is_goal: false
+  is_failure: false
+  scenario: unlabeled_choices
+
+unlabeled_choices_goal:
+  is_start: false
+  is_goal: true
+  is_failure: false
+  scenario: unlabeled_choices
+
+#######################
+###REGULAR LEAF NODES #
+#######################
+
+regular_leaf_root:
+  is_start: true
+  is_goal: false
+  is_failure: false
+  scenario: regular_leaf_nodes
+
+regular_leaf_goal:
+  is_start: false
+  is_goal: true
+  is_failure: false
+  scenario: regular_leaf_nodes
+
+regular_leaf:
+  is_start: false
+  is_goal: false
+  is_failure: false
+  scenario: regular_leaf_nodes

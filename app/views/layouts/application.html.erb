@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alchemy</title>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+
+</head>
+<body ng-app="alchemy" ng-strict-di>
+
+  <div ng-include="'nav/_nav.html'"></div>
+
+  <div class="container">
+      <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="alerts.splice($index, 1);">{{alert.msg}}</alert>
+    <ui-view></ui-view>
+  </div>
+
+</body>
+</html>

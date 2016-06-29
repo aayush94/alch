@@ -1,0 +1,119 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  node: one
+  to_node: two
+  text: Bake A Pie
+
+one:
+  node: one
+  to_node: failure_node
+  text: Fail faster
+
+success_choice:
+  node: one
+  to_node: success_node
+  text: rainbow road
+
+two:
+  node: two
+  to_node: one
+  text: Eat A Carrot
+
+three:
+  node: two
+  to_node: one
+  text: Fry Some Salmon
+
+four:
+  node: one
+  to_node: two
+  text: Jump Off A Cliff
+
+five:
+  node: failure_node
+  to_node: one
+  text: wow fails
+
+six:
+  node: success_node
+  to_node: failure_node
+  text: success
+
+seven:
+  node: six
+  to_node: require_justify_node
+  text: get jiggy wit it
+
+eight:
+  node: require_justify_node
+  to_node: six
+  text: do it
+
+nine:
+  node: with_five_choices
+  text: wow
+
+ten:
+  node: with_five_choices
+  text: wow
+
+eleven:
+  node: with_five_choices
+  text: wow
+
+twelve:
+  node: with_five_choices
+  text: wow
+
+thirteen:
+  node: with_five_choices
+  text: wow
+
+locked_scenario_choice:
+  node: locked_scenario_node
+  text: stockholm
+
+###########################
+###FOR COMPLETE SCENARIO###
+###########################
+
+complete_root_to_fail:
+  text: root choice
+  node_id: 123
+  to_node: complete_scenario_failure
+
+complete_root_to_goal:
+  text: another choice
+  node_id: 123
+  to_node: complete_scenario_goal
+
+#####################################
+###FOR INCOMPLETE CHOICES SCENARIO###
+#####################################
+
+incomplete_choice:
+  text: choice it up
+  node: incomplete_choices_root
+
+###############################
+###FOR REGULAR LEAF SCENARIO###
+###############################
+
+regular_leaf_root_to_goal:
+  text: let's all choice together
+  node: regular_leaf_root
+  to_node: regular_leaf_goal
+
+regular_leaf_root_to_regular_leaf:
+  text: choicing makes the world go round
+  node: regular_leaf_root
+  to_node: regular_leaf
+
+####################################
+###FOR UNLABELED CHOICES SCENARIO###
+####################################
+
+unlabeled_choice_root_to_goal:
+  node: unlabeled_choice_root
+  to_node: unlabeled_choice_goal

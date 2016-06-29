@@ -1,0 +1,66 @@
+<div class="page-header">
+  <h3>{{course.title}} <span ng-show="showings.length > 0"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> {{showings.length}} scenario{{pluralize ? "s" : ""}}</span></h3>
+</div>
+
+<div ng-if="currentUser.isInstructor">
+    <div class="panel">
+      <div class="panel-heading"><h3 class="panel-title">Assign a Scenario</h3></div>
+      <div class="panel-body">
+        <create-showing></create-showing>
+      </div>
+    </div>
+</div>
+
+<div class="panel" ng-hide="currentUser.isInstructor || showings.length > 0">
+    <div class="panel-body">
+        There are currently no assigned scenarios for this course.
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-4 col-md-4 showing-tile" ng-repeat="showing in showings | orderBy:'-is_graded'">
+
+    <div class="panel">
+
+      <div ng-if="currentUser.isInstructor" class="settings-btn btn-group" dropdown>
+          <span class="glyphicon glyphicon-cog" aria-hidden="true" dropdown-toggle></span>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="single-button">
+          <li ng-if="!isExpired(showing)" role="menuitem"><a href="" ng-click="changeStartEndDate(showing)">Change Start/End Date</a></li>
+          <li ng-if="!isExpired(showing)"role="menuitem"><a href="" ng-click="editShowing(showing)">Edit Scenario</a></li>
+          <li ng-if="!isExpired(showing)" class="divider"></li>
+          <li role="menuitem"><a href="" ng-click="hideShowing(showing)">Delete</a></li>
+        </ul>
+      </div>
+
+      <div ng-click="open(showing)" class="text-center panel-body">
+        <h3>{{showing.display_name}}</h3>
+        <p>{{showing.start_time | date : format : timezone}} <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> {{showing.end_time | date : format : timezone}}</p>
+      </div>
+
+      <ul class="list-group">
+        <li class="list-group-item">
+          {{isInstructor ? "Max Attempts" : "Attempts Left"}}
+          <div class="pull-right">
+            <span class="label label-default">{{getAttemptsData(currentUser.isInstructor, showing)}}</span>
+          </div>
+        </li>
+
+        <li class="list-group-item">
+          Scenario Type
+          <div class="pull-right">
+            <span class="label" ng-class="{ 'label-danger': showing.is_graded, 'label-primary': !showing.is_graded }">{{showing.is_graded? "Graded" : "Practice"}}</span>
+          </div>
+        </li>
+
+        <li class="list-group-item">
+          Status
+          <div class="pull-right">
+            <span class="label" ng-class="statusClass(showing.user_session.status)">{{formatStatus(showing.user_session.status)}}</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div><!-- end row -->
+

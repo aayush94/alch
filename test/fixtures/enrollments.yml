@@ -1,0 +1,44 @@
+
+one:
+  course: one
+  user: instructor
+
+two:
+  course: one
+  user: student
+
+three:
+  course: two
+  user: student
+
+four:
+  course: three
+  user: instructor
+
+nine:
+  course: three
+  user: student
+
+ten:
+  course: one
+  user: student3
+
+##############################
+####COURSE REPORT TESTING#####
+##############################
+
+five:
+  course: full_report_testing
+  user: instructor
+
+six:
+  course: full_report_testing
+  user: student
+
+seven:
+  course: full_report_testing
+  user: student2
+
+eight:
+  course: full_report_testing
+  user: student3

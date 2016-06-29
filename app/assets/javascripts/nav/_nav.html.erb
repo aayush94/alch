@@ -1,0 +1,24 @@
+<nav class="navbar navbar-default navbar-fixed-top" ng-controller="NavController">
+
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">
+      <img class="logo-img" src='<%= asset_path("alchemy-logo.png") %>' alt="logo">Alchemy
+    </a>
+  </div>
+
+  <ul class="nav navbar-nav pull-right">
+
+    <!-- if not signed in -->
+    <li ng-class="{active: isActive('/login')}" ng-hide="signedIn()"><a href="#/login">Login / Sign Up</a></li>
+    <!-- end -->
+
+    <!-- if signed in -->
+    <li ng-show="signedIn()"><a><strong>{{currentUser.username}}</strong></a></li>
+    <li ng-class="{active: isActive('/dashboard')}" ng-show="signedIn()"><a href="#/dashboard">Dashboard</a></li>
+    <li ng-class="{active: isActive('/reporting')}" ng-show="currentUser.isInstructor"><a href="#/reporting">Reporting</a></li>
+    <li ng-class="{active: isActive('/builder')}" ng-show="currentUser.isInstructor"><a href="#/builder">Scenario Builder</a></li>
+    <li ng-show="signedIn()"><a href="" ng-click="logout()">Log Out</a></li>
+    <!-- end -->
+
+  </ul>
+</nav>

@@ -1,0 +1,6 @@
+<form name="createCourseForm">
+    <div class="form-inline">
+        <input type="text" class="form-control" ng-model="course.title" placeholder="Course Title" ng-minlength="3" required>
+      <button type="submit" class="btn btn-warning" ng-click="createCourse(course)" ng-disabled="!createCourseForm.$valid">Create</button>
+    </div>
+</form>

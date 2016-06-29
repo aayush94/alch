@@ -1,0 +1,23 @@
+<!-- /////////////////////////////////
+SCENARIO BUILDER 
+/////////////////////////////////////-->
+
+<div class="page-header">
+  <h3>Scenario Builder</h3>
+</div>
+
+<div class="row">
+  <div class="col-sm-8">
+    <div class="panel">
+      <div class="panel-heading"><h3 class="panel-title">Scenarios</h3></div>
+      <div class="panel-body" ng-hide="scenarios.length > 0">
+        <p>You haven't built any scenarios yet. Get building.</p>
+      </div>
+      <scenario-list></scenario-list>
+    </div>
+
+  </div>
+  <div class="col-sm-4">
+    <create-scenario></create-scenario>
+  </div>
+</div>

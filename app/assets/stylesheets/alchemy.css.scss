@@ -1,0 +1,465 @@
+/**
+ * Alchemy top secret styles, shhhhh
+ */
+
+/*  General   */
+
+body {
+  background-color: #7d9ac1;
+}
+
+@font-face {
+  font-family: "Alchemy";
+  src: asset-url('AlteHaasGroteskBold.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Alchemy";
+  src: asset-url('AlteHaasGroteskRegular.ttf') format("truetype");
+  font-weight: bold;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.container {
+  margin-top: 75px;
+}
+
+.page-header {
+  color: #eef0f2;
+  font-family: "Alchemy";
+  margin-bottom: 0.5em;
+}
+
+.page-header span {
+  color: #bad7f3;
+}
+
+.panel-heading {
+  border-bottom: 1px solid #eef0f2;
+}
+
+.ui-select-container {
+  width: 300px; /* <-- srsly? */
+}
+
+.disabled {
+  color: #ccc;
+}
+
+/* Nav */
+
+a.navbar-brand {
+  font-family: "Alchemy";
+  color: #eef0f2!important; /* <-- bad boi */
+}
+
+.logo-img {
+  width: 20px;
+  display: inline!important;
+  margin-right: 10px;
+}
+
+/* Dashboard */
+
+.access-code {
+  color: #8a8a8a;
+  font-size: 0.7em;
+}
+
+/*  Login   */
+
+.logo-type {
+  font-size: 2.5em;
+  color: #eef0f2;
+  font-family: "Alchemy";
+  margin-top: 10px;
+}
+
+.tagline {
+  color: #bad7f3;
+  font-family: "Alchemy";
+  margin-bottom: 40px;
+}
+
+.login-divider {
+  border-color: #bad7f3;
+  margin-bottom: 40px;
+  width: 200px;
+}
+
+.orphans {
+  border: 1px solid gray;
+}
+
+.student-grid {
+    width: 100%;
+    height: 250px;
+    background-color:#FFF;
+}
+
+.login-signup {
+  margin-bottom: 100px;
+}
+
+.login-signup .logo {
+  width: 100px;
+}
+
+.login-signup form {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-top: 2px solid #bad7f3;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.login-signup form input {
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+  border: none;
+}
+
+.login-signup form input {
+  border-top: 1px solid #ccc;
+}
+
+.login-signup form input:first-child {
+  border-top: 0;
+}
+
+.login-signup form button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/*  Courses   */
+
+.showing-tile .new-win-icon {
+  position: absolute;
+  top: 9px;
+  right: 25px;
+  color: #7997b9;
+  visibility: hidden;
+}
+
+.showing-tile .settings-btn {
+  position: absolute;
+  top: 9px;
+  right: 25px;
+  z-index: 5;
+}
+
+.showing-tile .panel:hover .new-win-icon {
+  visibility: visible;
+}
+
+.showing-tile .panel:hover {
+  background-color: #f4fafe;
+  cursor: pointer;
+}
+
+.showing-tile:nth-child(3n+1) {
+  clear: both;
+}
+
+/* Create Showing */
+
+.create-showing-row-1 {
+  margin-bottom: 15px;
+}
+
+.attempts-setting {
+  width: 100%;
+}
+
+.showing-type-select {
+  width: 150px; /* <-- srsly? */
+}
+
+.scenario-select {
+  width: 300px;
+}
+
+/* Scenario Builder */
+
+.scenario-list-group h4 {
+  display: inline;
+}
+
+.scenario-edit-btn {
+  display: none;
+}
+
+.scenario-list-group .list-group-item:hover .scenario-edit-btn {
+  display: inline;
+}
+
+.scenario-accordion .form-group {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.node-img-wrap {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.node-img-wrap .delete-img {
+  position: absolute;
+  border-radius: 5px;
+  top: 10px;
+  left: 10px;
+  opacity: 0.7;
+  padding: 2px 5px;
+  text-transform: uppercase;
+  line-height: 100%;
+}
+
+.node-img-wrap .delete-img span {
+  position: relative;
+  color: #fff;
+}
+
+.delete-img span small {
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+}
+
+.node-img-wrap img {
+  border: 5px solid #e2ebf3;
+  border-radius: 5px;
+  display: block;
+}
+
+.empty-img {
+  height: 300px;
+  line-height: 300px;
+  vertical-align: middle;
+  text-align: center;
+  width:100%;
+  border: 1px dashed #8db0d8;
+  border-radius: 5px;
+  color: #8db0d8;
+  background-color: #e2ebf3;
+}
+
+.empty-img:hover {
+  border-color: #7997b9;
+  color: #7997b9;
+  cursor: pointer;
+}
+
+.node-wrap {
+  position: relative;
+}
+
+.node-desc {
+  min-height: 200px;
+}
+
+.builder-side-panel {
+  text-align: center;
+}
+
+.builder-side-panel button {
+  display: block;
+  width: 100%;
+}
+
+.node-banner {
+  position: relative;
+}
+
+.node-circle {
+  font-family: "Alchemy";
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  font-size: 1.5em;
+  line-height: 50px;
+  background-color: #8db0d8;
+  text-align: center;
+  color: #fff;
+}
+
+.node-wrap .failure {
+  background-color: #f49998;
+}
+
+.node-wrap .goal {
+  background-color: #a2c582;
+}
+
+.node-wrap .start {
+  background-color: #6b6b6b;
+}
+
+.node-wrap .normal {
+  background-color: #8db0d8;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.delete-node {
+  position: absolute;
+  top: -11px;
+  right: -12px;
+  color: #fff;
+  font-size: 1.8em;
+}
+
+.delete-node span {
+  position: relative;
+  top: -13px;
+}
+
+.new-node-btn {
+  color: #606d55;
+}
+
+.node-type-btn {
+  margin-right: 7px;
+}
+
+.tree-popup {
+  max-width: 200px;
+  text-align: center;
+  font-family: "Helvetica";
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Player */
+
+.player-header {
+  text-align: center;
+}
+
+.player-header h5 {
+  color: #bad7f3;
+}
+
+.player-header h3 {
+  margin-top: 5px;
+}
+
+.player-header hr {
+  width: 25%;
+  opacity: 0.5;
+}
+
+.player-header p {
+  display: none;
+}
+
+.player-card .player-card-img {
+  border: 5px solid #e2ebf3;
+  border-radius: 5px;
+}
+
+.session-failure {
+  text-align: center;
+}
+
+.session-success {
+  text-align: center;
+}
+
+.attempts-count {
+  border-radius: 5px;
+  text-align:center;
+  padding: 10px 10px 5px 10px;
+}
+
+.attempts-count hr {
+  width: 50%;
+  margin: 5px auto;
+  text-align: center;
+  margin-bottom: 5px;
+  display: block;
+  opacity: 0.5;
+}
+
+.attempts-count .count {
+  font-size: 3em;
+  font-family: "Alchemy";
+  color: #eef0f2;
+  margin-bottom: 5px;
+}
+
+.attempts-count .desc {
+  margin-top: 10px;
+  text-transform: uppercase;
+  color: #bad7f3;
+  font-size: 0.6em;
+  letter-spacing: 0.1em;
+}
+
+/* Results */
+
+.results {
+  text-align: center;
+}
+
+/* Reporting */
+
+.report-btn-bar {
+  margin-bottom: 15px;
+}
+
+.reporting-tree {
+  padding-right: 15px;
+}
+
+.full-course-report {
+  text-align: center;
+}
+
+.edge-popup {
+  max-width: 300px;
+  font-family: "Helvetica";
+  font-weight: normal;
+}
+
+/* Assets */
+
+.assets-grid {
+  max-height: 500px;
+  overflow: scroll;
+}
+
+.assets-grid div:nth-child(3n+1) {
+  clear:both;
+}
+
+.assets-grid img {
+  border: 5px solid #e2ebf3;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.assets-grid img:hover {
+  cursor: pointer;
+  border-color: #bad7f3;
+}
+
+.image-modal-footer .btn-upload {
+  background-color: #f1e8b9;
+}
+
+/* Modals */
+
+.modal-backdrop {
+    bottom:0;
+}

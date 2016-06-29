@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ubc:
+  id: 1
+  name: University of British Columbia
+  address: One Water Way
+
+waterloo:
+  id: 2
+  name: University of Dumberloo
+  address: Ontarioni Antipasti Dr.
+
+sfu:
+  id: 3
+  name: Simon Fraser University
+  address: 0x1f21 Burnaby Mountain 
+
+mit:
+  id: 4
+  name: Massivetoothsefs Institute of Topology
+  address: 123 Marabomb Way

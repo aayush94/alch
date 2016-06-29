@@ -1,0 +1,66 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: CHEM 221 Making Pizza
+  description: Learn how to make pizza the Chemistry way.
+  root_node_id: 1
+  university_id: 1
+  archived: false
+  locked: false
+
+two:
+  name: CHEM 300 Advanced Spaghetti Mongling
+  description: You thought a fork was the proper way to eat spaghetti? Think again.
+  root_node_id: 3
+  university_id: 2
+  archived: false
+  locked: false
+
+locked:
+  name: I am locked. Fear me.
+  description: You heard me.
+  university_id: 1
+  locked: true
+
+another_ubc_scenario:
+  name: CHEM 222 Still Making Pizza
+  description: We just can't get enough.
+  university_id: 1
+  locked: false
+
+complete_scenario:
+  name: I'm actually a valid scenario
+  root_node_id: 123
+  university_id: 1
+  locked: false
+
+missing_goal:
+  name: Missing a goal node
+  university_id: 1
+  locked: false
+
+orphan_nodes:
+  name: Has orphan nodes
+  university_id: 1
+  locked: false
+
+incomplete_choices:
+  name: Has incomplete choices
+  university_id: 1
+  locked: false
+
+regular_leaf_nodes:
+  name: Has regular leaf nodes
+  university_id: 1
+  locked: false
+
+unlabeled_choices:
+  name: Has unlabeled choices
+  university_id: 1
+  locked: false
+
+locked_sfu:
+  name: Locked scenario at SFU
+  description: Lochness monster
+  university_id: 2
+  locked: true

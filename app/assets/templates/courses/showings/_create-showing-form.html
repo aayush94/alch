@@ -1,0 +1,75 @@
+<div class="create-showing row" ng-switch="scenarios.length">
+  <div class="col-xs-12">
+    <div ng-switch-when="0">You have no scenarios to assign.</div>
+
+    <div class="row">
+      <div class="col-xs-12">
+
+        <form ng-switch-default name="showingForm" novalidate class="form-horizontal">
+
+          <div class="create-showing-row-1 row">
+
+            <div class="col-xs-12 col-sm-6">
+
+              <ui-select class="scenario-select" ng-model="scenario.selected" theme="bootstrap" ng-disabled="disabled" reset-search-input="true" required>
+              <ui-select-match placeholder="Select a scenario...">{{$select.selected.name}}</ui-select-match>
+              <ui-select-choices repeat="scenario in scenarios | filter: $select.search">
+              <div ng-bind-html="scenario.name | highlight: $select.search"></div>
+              <small>{{scenario.description}}</small>
+              </ui-select-choices>
+              </ui-select>
+
+            </div><!-- /col -->
+
+            <div class="col-xs-12 col-sm-3">
+
+              <ui-select class="showing-type-select" ng-model="scenario.type" theme="bootstrap" ng-disabled="disabled" reset-search-input="true" required>
+              <ui-select-match placeholder="Scenario Type">{{$select.selected}}</ui-select-match>
+              <ui-select-choices repeat="type in scenarioTypes | filter: $select.search">
+              <div ng-bind-html="type | highlight: $select.search"></div>
+              </ui-select-choices>
+              </ui-select>
+
+            </div>
+
+            <div class="col-xs-12 col-sm-3">
+              <input class="attempts-setting" type="number" name="maxAttempts" placeholder="Maximum attempts" class="form-control" ng-if="scenario.type === scenarioTypes[0]" ng-model="scenario.max_attempts" ng-required="true" close-text="Close" min="1" max="1000" required/>
+              <span style="color:red" ng-show="showingForm.maxAttempts.$error.min">Must be greater than 0</span>
+              <span style="color:red" ng-show="showingForm.maxAttempts.$error.max">Must be less than or equal to 1000</span>
+            </div>
+
+          </div><!-- /.row -->
+
+          <div class="row">
+
+            <div class="col-xs-12 col-sm-6">
+
+              <p class="input-group">
+                <input type="text" placeholder="Start Date" class="form-control" datepicker-popup="{{format}}" ng-model="scenario.start_time" is-open="$parent.opened1" datepicker-options="dateOptions" close-text="Close" required/>
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-default" ng-click="open($event, 'opened1')"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+              </p>
+
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+
+              <p class="input-group">
+                <input type="text" placeholder="End Date" class="form-control" datepicker-popup="{{format}}" ng-model="scenario.end_time" is-open="$parent.opened2" datepicker-options="dateOptions" close-text="Close" required/>
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-default" ng-click="open($event, 'opened2')"><i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+              </p>
+
+            </div>
+
+          </div><!-- /row -->
+
+          <button type="submit" class="btn btn-warning" ng-click="createShowing(scenario)" ng-disabled="!showingForm.$valid">Assign</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

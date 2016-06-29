@@ -1,0 +1,150 @@
+one:
+  start_time: <%= 5.days.ago %>
+  end_time: <%= 10.days.from_now %>
+  scenario: one
+  course: one
+  max_attempts: 5
+
+two:
+  start_time: <%= 2.days.ago %>
+  end_time: <%= 1.days.ago %>
+  scenario: two
+  course: two
+  max_attempts: 5
+
+course_3_showing_1:
+  start_time: 2015-02-15 23:20:48
+  end_time: 2015-02-15 23:20:48
+  scenario: one
+  course: three
+  is_graded: false
+
+course_3_showing_2:
+  start_time: 2015-02-15 23:20:48
+  end_time: 2015-02-15 23:20:48
+  scenario: two
+  course: three
+  is_graded: false
+
+active_showing:
+  start_time: <%= 2.days.ago %>
+  end_time: <%= 1.days.from_now %>
+  is_graded: true
+  scenario: one
+  course: one
+  max_attempts: 5
+
+active_showing_2:
+  start_time: <%= 2.days.ago %>
+  end_time: <%= 1.days.from_now %>
+  is_graded: true
+  scenario: one
+  course: one
+  max_attempts: 5
+
+active_showing_3:
+  start_time: <%= 2.days.ago %>
+  end_time: <%= 1.days.from_now %>
+  is_graded: true
+  scenario: one
+  course: one
+  max_attempts: 5
+
+active_showing_3_practice:
+  start_time: <%= 2.days.ago %>
+  end_time: <%= 1.days.from_now %>
+  is_graded: false
+  scenario: one
+  course: one
+  max_attempts: 5
+
+non_graded_showing:
+  start_time: <%= 2.days.ago %>
+  end_time: <%= 1.days.from_now %>
+  is_graded: false
+  scenario: one
+  course: one
+  max_attempts: 5
+
+expired_showing:
+  start_time: <%= 3.days.ago %>
+  end_time: <%= 2.days.ago %>
+  scenario: complete_scenario
+  course: one
+  max_attempts: 5
+
+justify_showing:
+  start_time: <%= 2.days.ago %>
+  end_time: <%= 1.days.from_now %>
+  scenario: one
+  is_graded: true
+  course: one
+  max_attempts: 5
+
+failure_showing:
+  start_time: <%= 2.days.ago %>
+  end_time: <%= 1.days.from_now %>
+  scenario: one
+  is_graded: true
+  course: one
+  max_attempts: 5
+
+complete_showing:
+  start_time: <%= 2.days.ago %>
+  end_time: <%= 1.days.from_now %>
+  scenario: complete_scenario
+  is_graded: true
+  max_attempts: 5
+  course: one
+
+report_showing:
+  start_time: <%= 2.days.ago %>
+  end_time: <%= 1.days.from_now %>
+  scenario: complete_scenario
+  is_graded: true
+  max_attempts: 5
+  course: one
+
+course_report_showing:
+  start_time: <%= 2.days.ago %>
+  end_time: <%= 1.days.from_now %>
+  scenario: complete_scenario
+  is_graded: true
+  max_attempts: 5
+  course: full_report_testing
+
+course_report_showing_2:
+  start_time: <%= 2.days.ago %>
+  end_time: <%= 1.days.from_now %>
+  scenario: complete_scenario
+  is_graded: true
+  max_attempts: 5
+  course: full_report_testing
+
+has_not_started:
+  start_time: <%= 2.days.from_now %>
+  end_time: <%= 6.days.from_now %>
+  scenario: complete_scenario
+  max_attempts: 5
+  course: one
+
+hidden_showing:
+  start_time: <%= 2.days.ago %>
+  end_time: <%= 1.days.from_now %>
+  scenario: complete_scenario
+  is_graded: true
+  max_attempts: 900
+  course: one
+  hidden: true
+
+to_be_hidden:
+  start_time: <%= 2.days.ago %>
+  end_time: <%= 1.days.from_now %>
+  scenario: complete_scenario
+  is_graded: true
+  max_attempts: 900
+  course: one
+  hidden: false
+
+
+

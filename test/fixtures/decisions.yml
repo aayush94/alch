@@ -1,0 +1,48 @@
+success:
+  showing_session_id: one
+  from_node: one
+  to_node: two
+  result: <%= Decision.results[:success] %>
+
+failure:
+  showing_session_id: one
+  from_node: one
+  to_node: two
+  result: <%= Decision.results[:failure] %>
+
+neutral:
+  showing_session_id: one
+  from_node: one
+  to_node: two
+  result: <%= Decision.results[:neutral] %>
+
+report_decision1:
+  showing_session: report_session_1
+  from_node: complete_scenario_root
+  to_node: complete_scenario_failure
+  result: <%= Decision.results[:failure] %>
+
+report_decision2:
+  showing_session: report_session_1
+  from_node: complete_scenario_root
+  to_node: complete_scenario_goal
+  result: <%= Decision.results[:success] %>
+
+report_decision3:
+  showing_session: report_session_2
+  from_node: complete_scenario_root
+  to_node: complete_scenario_failure
+  result: <%= Decision.results[:failure] %>
+
+report_decision4:
+  showing_session: report_session_2
+  from_node: complete_scenario_root
+  to_node: complete_scenario_goal
+  result: <%= Decision.results[:success] %>
+
+decision_with_justification:
+  showing_session: justify_session
+  from_node: require_justify_node
+  to_node: six # Grrr
+  justification: Test Oh Yes
+  result: <% Decision.results[:neutral] %>
