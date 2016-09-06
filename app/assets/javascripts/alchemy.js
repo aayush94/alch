@@ -106,6 +106,21 @@ alchemy.config(['$stateProvider', '$urlRouterProvider', 'AuthInterceptProvider',
         }
       }]
     })
+    
+.state('forgot',{
+      url: '/forgotPassword',
+      templateUrl: 'auth/_login.html',
+      controller: 'AuthController' ,
+      resolve: {
+      universities: ['UniversityApiClient', function(UniversityApiClient) {
+        return UniversityApiClient.getUniversities();
+      }
+      ]},
+      onEnter: ['$state', 'Auth', function($state, Auth) {
+       $state.go("login");
+      }]
+    })
+    
   .state('signup', {
     url: '/signup',
     templateUrl: 'auth/_signup.html',

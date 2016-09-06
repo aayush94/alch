@@ -9,10 +9,13 @@
 
 </head>
 <body ng-app="alchemy" ng-strict-di>
-
+ 
   <div ng-include="'nav/_nav.html'"></div>
+   
 
   <div class="container">
+  
+ 
       <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="alerts.splice($index, 1);">{{alert.msg}}</alert>
     <ui-view></ui-view>
   </div>

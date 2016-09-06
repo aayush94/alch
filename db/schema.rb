@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 20150614195816) do
   add_index "choices", ["to_node_id"], name: "index_choices_on_to_node_id"
 
   create_table "courses", force: :cascade do |t|
-    t.text     "title"
-    t.text     "access_code"
+    t.string   "title"
+    t.string   "access_code"
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
     t.boolean  "active",        default: true
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 20150614195816) do
 
   create_table "nodes", force: :cascade do |t|
     t.string   "title",                  default: ""
-    t.text     "body",                   default: ""
+    t.text     "body"
     t.boolean  "is_start",               default: false
     t.boolean  "is_goal",                default: false
     t.boolean  "is_failure",             default: false

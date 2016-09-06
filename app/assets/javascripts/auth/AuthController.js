@@ -5,6 +5,7 @@ alchemy.controller("AuthController", ['$rootScope', '$scope', '$state', '$stateP
   $scope.user = {};
 
   $scope.universities = universities;
+  
 
   $scope.login = function() {
     Auth.login($scope.user).then(function(){
@@ -13,7 +14,13 @@ alchemy.controller("AuthController", ['$rootScope', '$scope', '$state', '$stateP
         Util.showAlert('danger', error.error);
     });
   };
-
+  
+  $scope.forgot = function() {
+    Auth.sendResetPasswordInstructions($scope.user);
+    //.then(function() {
+      //$state.go('loginForm');
+   // });
+};
   $scope.signup = function() {
 
     $scope.user.university_id = $scope.universities.selected.id;
@@ -29,5 +36,4 @@ alchemy.controller("AuthController", ['$rootScope', '$scope', '$state', '$stateP
     var error = xhr.data.error;
     Util.showAlert('danger', error);
   });
-
 }]);

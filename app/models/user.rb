@@ -21,6 +21,7 @@ class User < ActiveRecord::Base
   def role?(base_role)
     User.roles[self.role] >= User.roles[base_role]
   end
+  
 
   private
     def set_default_role

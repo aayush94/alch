@@ -1,0 +1,24 @@
+<div ng-repeat="choice in choices" class="input-group" style="margin-bottom: 15px;">
+  <div class="input-group-btn">
+    <ui-select ng-model="choice.selected" theme="bootstrap" ng-disabled="node.scenario.locked" reset-csearch-input="true" style="width:75px;">
+    <ui-select-match placeholder="{{choice.to_node_label || 'Link'}}">{{choice.to_node_label}}</ui-select-match>
+    <ui-select-choices repeat="node in filterCurrentNode(nodes) | filter: $select.search">
+    <div ng-bind-html="node.label | highlight: $select.search" ng-click="updateChoiceLink(choice, node)"></div>
+    </ui-select-choices>
+    </ui-select>
+  </div><!-- /btn-group -->
+
+  <input type="text" placeholder="Choice description..." class="form-control" ng-model="choice.text" ng-blur="updateChoice(choice)" aria-label="...">
+
+  <span class="input-group-btn">
+    <button title="Delete this choice" ng-disabled="node.scenario.locked" class="btn btn-default" type="button" ng-click="deleteChoice(choice)"><span class="glyphicon glyphicon-remove"></span></button>
+  </span>
+</div><!-- /input-group -->
+
+
+<p>
+  <span ng-if="node.is_goal || node.is_failure" tooltip-placement="top" tooltip="Failure and goal nodes cannot have choices.">
+    <button disabled class="btn btn-warning" ng-click="createChoice()"><span class="glyphicon glyphicon-plus"></span> Add Choice</button>
+  </span>
+  <button ng-if="!node.is_goal && !node.is_failure" ng-disabled="node.scenario.locked" class="btn btn-warning" ng-click="createChoice()"><span class="glyphicon glyphicon-plus"></span> Add Choice</button>
+</p>

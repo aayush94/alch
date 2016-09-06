@@ -1,0 +1,37 @@
+<div class="login-signup row">
+  <div class="col-sm-6 col-sm-offset-3 text-center">
+    <img class="logo" src="/assets/alchemy-logo-79352526fded0af46ca7d168617d8dd259bb7f57083222ad38bf53b7eb5489a5.png" alt="logo">
+    <h1 class="logo-type">Alchemy</h1>
+    <h4 class="tagline">The Analytical Chemistry Learning Platform</h4>
+
+    <hr class="login-divider"/>
+    <tabset>
+
+    <tab heading="Login">
+      <form name="loginForm" ng-submit="login()">
+        <input type="email" class="form-control" placeholder="Email" ng-model="user.email" required>
+        <input type="password" class="form-control" placeholder="Password" ng-model="user.password" required>
+        <button type="submit" class="btn btn-block btn-warning" ng-disabled="!loginForm.$valid"><strong>Login</strong></button>
+      </form>
+    </tab>
+
+    <tab heading="Sign Up">
+      <form name="signupForm" ng-submit="signup()">
+        <ui-select ng-model="universities.selected" theme="bootstrap" ng-disabled="disabled" reset-search-input="true" required>
+          <ui-select-match placeholder="Select a University...">{{$select.selected.name}}</ui-select-match>
+          <ui-select-choices repeat="university in universities | filter: $select.search">
+          <div ng-bind-html="university.name | highlight: $select.search"></div>
+          <small>{{university.address}}</small>
+          </ui-select-choices>
+        </ui-select>
+
+        <input type="email" class="form-control" placeholder="Email" ng-model="user.email" required>
+        <input type="text" class="form-control" placeholder="Username" ng-model="user.username" required>
+        <input type="password" class="form-control" placeholder="Password" ng-model="user.password" required>
+        <button type="submit" class="btn btn-block btn-warning" ng-disabled="!signupForm.$valid"><strong>Sign Up</strong></button>
+      </form>
+    </tab>
+    </tabset>
+
+  </div>
+</div>

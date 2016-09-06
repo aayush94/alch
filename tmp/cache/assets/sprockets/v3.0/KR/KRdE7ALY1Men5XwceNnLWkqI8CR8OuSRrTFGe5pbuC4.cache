@@ -1,0 +1,25 @@
+{:uriI"èfile://app/assets/templates/scenarios/_scenario-list.html?type=text/ng-html&id=b3285b4165d64d371482bbfa966a00e68ded4a6f3e318426357dd07aa280c9d6:ET:load_pathI"app/assets/templates;T:filenameI"7app/assets/templates/scenarios/_scenario-list.html;T:	nameI"scenarios/_scenario-list;T:logical_pathI""scenarios/_scenario-list.html;T:content_typeI"text/ng-html;T:sourceI"~<ul class="scenario-list-group list-group">
+  <li ng-repeat="scenario in scenarios" class="list-group-item">
+    <form name="editForm">
+
+      <div class="pull-left">
+        <h4><a href="#/builder/scenarios/{{scenario.id}}/nodes/{{scenario.root_node_id}}" ng-show="!editMode">{{scenario.name}}</a></h4>
+        <input type="text" name="text" class="form-control" ng-model="scenario.newName" ng-required="true" ng-minlength="4" ng-maxlength="50" placeholder="{{scenario.name}}" ng-show="editMode">
+      </div>
+
+      <div class="pull-right">
+        <span style="color:red" ng-show="editForm.text.$error.required && editForm.text.$dirty">Please enter a scenario name</span>
+        <span style="color:red" ng-show="editForm.text.$error.minlength">Name is too short (minimum is 4 characters)</span>
+        <span style="color:red" ng-show="editForm.text.$error.maxlength">Name is too long (maximum is 50 characters)</span>
+        <a href="" class="scenario-edit-btn" type="button" ng-show="!editMode" ng-click="editMode = ! editMode; scenario.newName = scenario.name"><small><span class="glyphicon glyphicon-pencil"></span></small> Edit Name</a>
+        <button class="btn btn-warning" type="button" ng-show="editMode" ng-disabled="!editForm.text.$valid" ng-click="editScenarioName(scenario); editMode = ! editMode">Save</button>
+      </form>
+    </div>
+    <div style="clear: both"></div>
+  </li>
+</ul>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Efile-digest://app/assets/templates/scenarios/_scenario-list.html;TTF:charsetI"
+utf-8;F:digest"%Á9îãÍ£>$%——fµ$ü6ÓvE”É/+EîbBƒ=:lengthi~:dependencies_digest"%≥≈àaO¥À¥‘	ñHO.»Êæ«0ì≠˜›9Hfì›¶€:idI"Eb3285b4165d64d371482bbfa966a00e68ded4a6f3e318426357dd07aa280c9d6;F:
+mtimel+d?tW

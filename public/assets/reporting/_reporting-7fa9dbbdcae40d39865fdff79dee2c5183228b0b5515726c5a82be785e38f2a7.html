@@ -1,0 +1,137 @@
+
+<div class="page-header">
+  <h3>Reporting 
+  <span ng-if="reportType == 'showing'"><span class="glyphicon glyphicon-chevron-right"></span> {{showing.label}}</span>
+  <span ng-if="reportType == 'course'"><span class="glyphicon glyphicon-chevron-right"></span> {{courseTitle}}</span></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="reporting-tree panel">
+      <div class="panel-body">
+        <abn-tree tree-data="courseTreeData"></abn-tree>
+      </div>
+    </div>
+  </div>
+
+  <div ng-switch="reportType">
+
+    <div ng-switch-when="showing">
+      <div class="col-md-8" ng-show="report">
+
+        <div class="report-btn-bar btn-group">
+          <label class="btn btn-default" ng-model="showing.reportType" btn-radio="'Summary'">Summary</label>
+          <label class="btn btn-default" ng-model="showing.reportType" btn-radio="'By Student'">By Student</label>
+        </div>
+
+        <!-- Summary -->
+        <div ng-if="showing.reportType === 'Summary' && report.summaries">
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Class Decision Overview <small>(Wider edges are more traveled)</small></h3>
+            </div>
+            <div class="panel-body">
+              <reporting-tree tree-height="400px" choices="report.choices" decisions="report.decisions" nodes="report.nodes"></reporting-tree>
+            </div>
+          </div>
+
+          <div class="row">
+
+            <div class="col-sm-6">
+
+              <div class="panel panel-default">
+                <div class="panel-heading"><h3 class="panel-title">Average No. Failures</small></h3></div>
+                <div class="panel-body text-center">{{report.summaries.class_average_num_failures}} / {{report.summaries.max_attempts_allowed}}</div>
+              </div>
+
+            </div>
+
+            <div class="col-sm-6">
+              <div class="panel panel-default">
+
+                <div class="panel-heading">
+                  <h3 class="panel-title">Completion Status</h3> 
+                </div>
+
+                <div class="panel-body">
+                  <span ng-show="report.summaries.num_students_completed">
+                    <strong>Completed</strong>
+                    <span class="text-right badge">{{report.summaries.num_students_completed}}</span> 
+                  </span>
+                  <span ng-show="report.summaries.num_students_failed">
+                    <strong>Failed</strong>
+                    <span class="badge">{{report.summaries.num_students_failed}}</span> 
+                  </span>
+                  <span ng-show="report.summaries.num_students_ongoing">
+                    <strong>Ongoing</strong>
+                    <span class="badge">{{report.summaries.num_students_ongoing}}</span> 
+                  </span>
+                  <span ng-show="report.summaries.num_students_expired">
+                    <strong>Expired</strong>
+                    <span class="badge">{{report.summaries.num_students_expired}}</span> 
+                  </span>
+                </div><!-- close panel-body -->
+              </div><!-- close panel -->
+
+            </div><!-- close col -->
+          </div>
+
+      </div>
+
+      <div ng-if="showing.reportType === 'By Student'">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title" ng-if="!selectedStudentUsername">Individual Decision Overview <small>(Wider edges are more traveled)</small></h3>
+            <h3 class="panel-title" ng-if="selectedStudentUsername">{{selectedStudentUsername}}'s Decision Overview <small>(Wider edges are more traveled)</small></h3>
+          </div>
+          <div class="panel-body">
+            <reporting-tree tree-height="400px" choices="studentReport.choices" decisions="studentReport.decisions" nodes="studentReport.nodes"></reporting-tree>
+          </div>
+        </div>
+
+        <div ui-grid="studentShowingGrid" ui-grid-selection class="student-grid"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div ng-switch-when="course">
+    <div class="col-sm-8">
+
+      <div class="row">
+        <div class="col-sm-9">
+
+          <div ui-grid="studentCourseGrid" class="student-grid"></div>
+
+        </div>
+
+        <div class="col-sm-3">
+
+          <div class="panel full-course-report">
+            <div class="panel-heading"><h3 class="panel-title">Course Average</h3></div>
+            <div class="panel-body"><h1>{{report.courseAverage}}<span ng-if="hasAverage()">%</span></h1></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div ng-switch-default>
+    <div class="col-md-8">
+
+      <div class="panel">
+        <div class="panel-body">
+          Select a Course or a Scenario to view a report.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+  </div>

@@ -1,0 +1,20 @@
+<ul class="scenario-list-group list-group">
+  <li ng-repeat="scenario in scenarios" class="list-group-item">
+    <form name="editForm">
+
+      <div class="pull-left">
+        <h4><a href="#/builder/scenarios/{{scenario.id}}/nodes/{{scenario.root_node_id}}" ng-show="!editMode">{{scenario.name}}</a></h4>
+        <input type="text" name="text" class="form-control" ng-model="scenario.newName" ng-required="true" ng-minlength="4" ng-maxlength="50" placeholder="{{scenario.name}}" ng-show="editMode">
+      </div>
+
+      <div class="pull-right">
+        <span style="color:red" ng-show="editForm.text.$error.required && editForm.text.$dirty">Please enter a scenario name</span>
+        <span style="color:red" ng-show="editForm.text.$error.minlength">Name is too short (minimum is 4 characters)</span>
+        <span style="color:red" ng-show="editForm.text.$error.maxlength">Name is too long (maximum is 50 characters)</span>
+        <a href="" class="scenario-edit-btn" type="button" ng-show="!editMode" ng-click="editMode = ! editMode; scenario.newName = scenario.name"><small><span class="glyphicon glyphicon-pencil"></span></small> Edit Name</a>
+        <button class="btn btn-warning" type="button" ng-show="editMode" ng-disabled="!editForm.text.$valid" ng-click="editScenarioName(scenario); editMode = ! editMode">Save</button>
+      </form>
+    </div>
+    <div style="clear: both"></div>
+  </li>
+</ul>

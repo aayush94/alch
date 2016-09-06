@@ -1,0 +1,15 @@
+{:uriI"ƒfile://app/assets/javascripts/home/_home.html?type=text/ng-html&id=ad954bd9bf5da4362ed45416c395d62e22f3914ed52adeea0fea85e109fa926f:ET:load_pathI"app/assets/javascripts;T:filenameI"+app/assets/javascripts/home/_home.html;T:	nameI"home/_home;T:logical_pathI"home/_home.html;T:content_typeI"text/ng-html;T:sourceI"	<!-- /////////////////////////////////
+  HOME
+/////////////////////////////////////-->
+
+<div class="row">
+  <div class="col-xs-12">
+    <h1>Home</h1>
+    <p>The <strong>future</strong> home of the <strong>future</strong> of analytical chemistry</p>
+  </div>
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"9file-digest://app/assets/javascripts/home/_home.html;TTF:charsetI"
+utf-8;F:digest"%´·y’ðœ4Ù¶’ÿô~¶/å™$ºWC`ÑQÿžÆ›[Ç:lengthi	:dependencies_digest"%.eX^}©¦q¡ÂÀg]l5^÷#~¿7]yµÁµ:idI"Ead954bd9bf5da4362ed45416c395d62e22f3914ed52adeea0fea85e109fa926f;F:
+mtimel+d?tW
