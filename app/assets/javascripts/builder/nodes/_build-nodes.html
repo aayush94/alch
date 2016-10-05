@@ -7,23 +7,16 @@
   <div class="col-sm-7">
 
     <div class="node-wrap panel">
-
       <div class="panel-heading">
-
         <div class="node-banner clearfix">
-
           <div class="pull-left node-circle" ng-class="getNodeTypeClass(node)">
             <span class="pointer" tooltip-placement="top" tooltip="{{node.label}} is a {{getNodeTypeClass(node)}} node">{{node.label}}</span>
           </div>
-
           <div class="pull-right">
             <button type="submit" class="new-node-btn btn btn-success" ng-click="addNode()" ng-disabled="node.scenario.locked"><span class="glyphicon glyphicon-plus"></span> <strong>New Node</strong></button>
-
           </div>
         </div>
-
       </div>
-
       <div class="panel-body">
         <node-form></node-form>
       </div>

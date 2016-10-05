@@ -27,6 +27,7 @@ gem 'active_model_serializers'
 
 # file attachment management
 gem 'paperclip'
+gem 'ckeditor'
 
 # complex object cloning
 gem 'amoeba', '~> 3.0.0'

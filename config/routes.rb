@@ -40,7 +40,6 @@ Rails.application.routes.draw do
     # USERS ENDPOINT
 
   devise_for :users, :controllers => { :registrations => 'registrations' }
-  #devise_for :users, :controllers => { :password => 'passwords' }
 
   devise_scope :user do
   	put 'users/elevate_to_instructor' => 'registrations#elevate_to_instructor'

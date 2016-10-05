@@ -5,6 +5,40 @@
       <img class="logo-img" src='<%= asset_path("alchemy-logo.png") %>' alt="logo">Alchemy
     </a>
   </div>
+  
+  <style>
+    .dropbtn {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+   
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+  </style>
 
   <ul class="nav navbar-nav pull-right">
 
@@ -13,7 +47,14 @@
     <!-- end -->
 
     <!-- if signed in -->
-    <li ng-show="signedIn()"><a><strong>{{currentUser.username}}</strong></a></li>
+    <li ng-show="signedIn()">
+      <div class="dropdown">
+        <button class="dropbtn"><strong>{{currentUser.username}}</strong></button>
+        <div class="dropdown-content">
+    <a href="#"><strong>Change Your Password</strong></a>
+  </div>
+</div>
+      </li>
     <li ng-class="{active: isActive('/dashboard')}" ng-show="signedIn()"><a href="#/dashboard">Dashboard</a></li>
     <li ng-class="{active: isActive('/reporting')}" ng-show="currentUser.isInstructor"><a href="#/reporting">Reporting</a></li>
     <li ng-class="{active: isActive('/builder')}" ng-show="currentUser.isInstructor"><a href="#/builder">Scenario Builder</a></li>
