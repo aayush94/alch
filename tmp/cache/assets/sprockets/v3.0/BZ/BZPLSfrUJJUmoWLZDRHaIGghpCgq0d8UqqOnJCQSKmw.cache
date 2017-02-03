@@ -1,0 +1,70 @@
+{:uriI"çfile://app/assets/javascripts/dashboard/_dashboard.html?type=text/ng-html&id=5fa8f2ccbbb4f9954f9140ec1e5e0de7fa41cf13b45d2d580b5b15e8e176b408:ET:load_pathI"app/assets/javascripts;T:filenameI"5app/assets/javascripts/dashboard/_dashboard.html;T:	nameI"dashboard/_dashboard;T:logical_pathI"dashboard/_dashboard.html;T:content_typeI"text/ng-html;T:sourceI",	<!-- /////////////////////////////////
+  DASHBOARD
+/////////////////////////////////////-->
+
+<div class="page-header">
+  <h3>Welcome back <span>{{currentUser.username}}</span></h3>
+</div>
+
+<div class="row">
+
+  <div class="col-sm-8">
+
+    <div class="panel">
+      <div class="panel-heading"><h3 class="panel-title">Courses</h3></div>
+      <div class="panel-body" ng-hide="courses.length > 0">
+        <p>You haven't enrolled in any classes yet.</p>
+      </div>
+      <!-- List group -->
+      <ul class="list-group">
+        <li ng-repeat="course in courses" class="list-group-item">
+          <h4><a href="#/courses/{{course.id}}">{{course.title}}</a></h4>
+          <small class="access-code" ng-show="currentUser.isInstructor">Access Code: {{course.access_code}}</small>
+        </li>
+      </ul>
+    </div>
+
+    <div class="panel" ng-show="currentUser.isInstructor">
+      <div class="panel-heading"><h3 class="panel-title">Create a New Course</h3></div>
+      <div class="panel-body">
+        <create-course></create-course>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-4">
+
+    <div class="panel">
+      <div class="panel-heading"><h2 class="panel-title">Enroll in a course</h2></div>
+      <div class="panel-body">
+        <form name="enrollmentForm" action="">
+          <div class="form-group">
+            <input type="text" class="form-control" ng-model="accessCode" id="access-code" placeholder="Enter access code..." required>
+          </div>
+          <button class="btn btn-warning" ng-click="access()" ng-disabled="!enrollmentForm.$valid">Enroll</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="panel" ng-show="currentUser.isInstructor">
+      <div class="panel-heading"><h2 class="panel-title">Permission an instructor</h2></div>
+      <div class="panel-body">
+        <p>Give a user instructor privileges by entering the email they signed up with below.</p>
+        <form name="authenticationForm" ng-submit="setInstructorPermission()">
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email Address" ng-model="targetUser.email" required>
+          </div>
+          <button type="submit" class="btn btn-warning" ng-disabled="!authenticationForm.$valid">Permission</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+</div><!-- end row -->
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Cfile-digest://app/assets/javascripts/dashboard/_dashboard.html;TTF:charsetI"
+utf-8;F:digest"%qf„ÉÂà_$˙M≤ßñπâõŒÄ÷O=ÛjﬁÇ.≈54:lengthi,	:dependencies_digest"%2†(ñl[®O•è™S3∑]#è¯…¬∂§ˇÓAS>:idI"E5fa8f2ccbbb4f9954f9140ec1e5e0de7fa41cf13b45d2d580b5b15e8e176b408;F:
+mtimel+˛VîX

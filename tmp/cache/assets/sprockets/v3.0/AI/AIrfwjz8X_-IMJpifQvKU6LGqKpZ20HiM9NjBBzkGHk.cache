@@ -1,0 +1,11 @@
+{:uriI"’file://app/assets/templates/courses/_create-course-form.html?type=text/ng-html&id=fa49f490f6ec41fc78db22911d686652f80887b19ec6818a2e772e87c349c80e:ET:load_pathI"app/assets/templates;T:filenameI":app/assets/templates/courses/_create-course-form.html;T:	nameI" courses/_create-course-form;T:logical_pathI"%courses/_create-course-form.html;T:content_typeI"text/ng-html;T:sourceI"Y<form name="createCourseForm">
+    <div class="form-inline">
+        <input type="text" class="form-control" ng-model="course.title" placeholder="Course Title" ng-minlength="3" required>
+      <button type="submit" class="btn btn-warning" ng-click="createCourse(course)" ng-disabled="!createCourseForm.$valid">Create</button>
+    </div>
+</form>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Hfile-digest://app/assets/templates/courses/_create-course-form.html;TTF:charsetI"
+utf-8;F:digest"%‰iê2«qŒc/áxòBmö¸à³9lH%ç™†³a:lengthiY:dependencies_digest"%,!%Ô“·U¼,§hæ£¥ˆÏ‘¢ºŠÕ{¬œØ:idI"Efa49f490f6ec41fc78db22911d686652f80887b19ec6818a2e772e87c349c80e;F:
+mtimel+þV”X

@@ -46,18 +46,18 @@ Rails.application.configure do
  
  #For Forget Password method
  #Using Devise
-  config.action_mailer.default_url_options = { :host => 'https://alch-aayush94.c9users.io' } 
+  config.action_mailer.default_url_options = { :host => '' } 
   config.action_mailer.delivery_method = :smtp 
   config.action_mailer.perform_deliveries = true 
   config.action_mailer.raise_delivery_errors = true 
   config.action_mailer.default :charset => "utf-8" 
  # ActionMailer::Base.smtp_settings = {
   config.action_mailer.smtp_settings = {
-:address => "smtp.gmail.com",
+:address => "",
 :port => 587,
-:domain => "mail.google.com",
-:user_name => "devresetest@gmail.com",
-:password => "reset123!",
+:domain => "",
+:user_name => "",
+:password => "",
 :authentication => :plain,
 :enable_starttls_auto => true 
 }

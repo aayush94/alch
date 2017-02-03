@@ -1,6 +1,6 @@
 class Node < ActiveRecord::Base
   validates :body,
-            :length => { maximum: 300 }
+            :length => { maximum: 1000 }
   validate :not_goal_and_failure, on: [:create, :update]
 
 	belongs_to :scenario

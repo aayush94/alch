@@ -1,0 +1,45 @@
+{:uriI"–file://app/assets/templates/scenarios/_create-scenario-form.html?type=text/ng-html&id=f710a4a1340024c94be27959613cc1f51013445e68fa989e7a2e4a1ebb9d7eb1:ET:load_pathI"app/assets/templates;T:filenameI">app/assets/templates/scenarios/_create-scenario-form.html;T:	nameI"$scenarios/_create-scenario-form;T:logical_pathI")scenarios/_create-scenario-form.html;T:content_typeI"text/ng-html;T:sourceI"G	<accordion class="scenario-accordion">
+<accordion-group heading="Create New Scenario">
+<form class="form-horizontal" name="forms.newScenarioForm">
+  <div class="form-group">
+    <input type="text" class="form-control" name="text" ng-model="scenario.name" placeholder="New Scenario Name" ng-required="true" ng-minlength="4" ng-maxlength="50">
+    <span style="color:red" ng-show="forms.newScenarioForm.text.$error.required && forms.newScenarioForm.text.$dirty">Please enter a scenario name</span>
+    <span style="color:red" ng-show="forms.newScenarioForm.text.$error.minlength">Name is too short (minimum is 4 characters)</span>
+    <span style="color:red" ng-show="forms.newScenarioForm.text.$error.maxlength">Name is too long (maximum is 50 characters)</span>
+  </div>
+  <div class="form-group">
+    <textarea class="form-control" id="description" placeholder="New Scenario Description"ng-model="scenario.description" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-warning" ng-click="createScenario(scenario)" ng-disabled="!forms.newScenarioForm.text.$valid">Create</button>
+  </div>
+</form>
+</accordion-group>
+<accordion-group heading="Create From Existing Scenario">
+<form class="form-horizontal" name="forms.copyScenarioForm">
+  <div class="form-group">
+    <ui-select ng-model="scenario.toCopy" theme="bootstrap" ng-disabled="disabled" reset-search-input="true" style="max-width: 300px;" required>
+    <ui-select-match placeholder="Select Existing Scenario">{{$select.selected.name}}</ui-select-match>
+    <ui-select-choices repeat="scenario in scenarios | filter: $select.search">
+    <div ng-bind-html="scenario.name | highlight: $select.search"></div>
+    <small>{{scenario.description}}</small>
+    </ui-select-choices>
+    </ui-select>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" ng-model="scenario.newName" placeholder="New Scenario Name" ng-minlength="4" ng-maxlength="50" required>
+  </div>
+  <div class="form-group">
+    <textarea class="form-control" ng-model="scenario.newDescription" placeholder="New Scenario Description"></textarea>
+  </div>
+  <div class="form-group">
+    <input type="submit" class="btn btn-warning" ng-click="createScenarioCopy(scenario)" ng-disabled="!forms.copyScenarioForm.$valid" value="Create">
+  </div>
+</form>
+</accordion-group>
+</accordion>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Lfile-digest://app/assets/templates/scenarios/_create-scenario-form.html;TTF:charsetI"
+utf-8;F:digest"%„Ã#e¤V¡I—74ÞfzÞÉ(®•õ—P‘o-Ã3.:lengthiG	:dependencies_digest"%èWU×}\zˆ¡çïd­4¨_nm¯Za[£¸	"…}:idI"Ef710a4a1340024c94be27959613cc1f51013445e68fa989e7a2e4a1ebb9d7eb1;F:
+mtimel+þV”X

@@ -1,0 +1,23 @@
+{:uriI"file://app/assets/templates/nodes/_select-image-modal.html?type=text/ng-html&id=3ffcdde3b475968fe59c842ccc8e60ef7ccce5ef38c81ca1acd88bbaec3c0fd2:ET:load_pathI"app/assets/templates;T:filenameI"8app/assets/templates/nodes/_select-image-modal.html;T:	nameI"nodes/_select-image-modal;T:logical_pathI"#nodes/_select-image-modal.html;T:content_typeI"text/ng-html;T:sourceI"\<div class="modal-header">
+  <h3 class="modal-title">Select An Image</h3>
+</div>
+
+<div class="modal-body">
+  <alert type="{{imageAlert.type}}" ng-show="imageAlert" close="imageAlert.close();">{{imageAlert.msg}}</alert>
+  <div class="assets-grid row">
+    <div class="col-sm-4" ng-repeat="asset in assets">
+      <img class="img-responsive" ng-src="{{asset.thumbnail}}" ng-click="setNodeAsset(asset)"/>
+    </div>
+  </div>
+</div>
+
+<div id="image-modal-footer" class="modal-footer">
+  <input type="file" ng-file-select="" ng-model="image" name="file" accept="image/*" required="">
+  <button ladda="imageUploading" class="btn-upload" ng-disabled="!image-modal-footer.$valid" data-size="s" data-color="yellow" data-style="expand-left" ng-click="upload(image)">Upload New</button>
+  <button class="btn btn-default btn-md" ng-click="cancel()">Cancel</button>
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Ffile-digest://app/assets/templates/nodes/_select-image-modal.html;TTF:charsetI"
+utf-8;F:digest"%^BtË ¢~Ç«ç\Ğü÷Ç§ÍÇÏ0Âjig	w;N:lengthi\:dependencies_digest"%IÅ£ıòãGS÷v‡ù{çÃü¦şo%I"©yLlm":idI"E3ffcdde3b475968fe59c842ccc8e60ef7ccce5ef38c81ca1acd88bbaec3c0fd2;F:
+mtimel+şV”X

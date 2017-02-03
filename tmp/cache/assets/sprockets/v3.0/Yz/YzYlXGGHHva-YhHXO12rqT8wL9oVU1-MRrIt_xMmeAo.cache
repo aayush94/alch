@@ -1,0 +1,10 @@
+{:uriI"file://app/assets/templates/player/_failure-screen.html?type=text/ng-html&id=20db46fd76c74e79f74fabe7432fe28a1a7c6f05162ed9af444393d68096e5ec:ET:load_pathI"app/assets/templates;T:filenameI"5app/assets/templates/player/_failure-screen.html;T:	nameI"player/_failure-screen;T:logical_pathI" player/_failure-screen.html;T:content_typeI"text/ng-html;T:sourceI"<div class="session-failure panel-body">
+  <h3><span class="glyphicon glyphicon-remove"></span><br/>You have exceeded the maximum allowed attempts.</h3>
+  <button class="btn btn-warning btn-block" ng-click="returnToCourse(session.showing.course)">Return to Dashboard</button>
+</div>
+
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Cfile-digest://app/assets/templates/player/_failure-screen.html;TTF:charsetI"
+utf-8;F:digest"%éÌ$ê¬5rNZx°ªå“µ+ş´í…¥ ²ˆ8ê×–:lengthi:dependencies_digest"%8aéĞĞ>AuTL°òP«s¥{;Ü½J©™,{º:idI"E20db46fd76c74e79f74fabe7432fe28a1a7c6f05162ed9af444393d68096e5ec;F:
+mtimel+şV”X

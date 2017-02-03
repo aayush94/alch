@@ -1,0 +1,14 @@
+{:uriI"›file://app/assets/javascripts/builder/nodes/_confirm-delete-node.html?type=text/ng-html&id=bdbf48b66b534a76bcb6aeac83b6cdd6e9e0a37516129c07891fc62d40029156:ET:load_pathI"app/assets/javascripts;T:filenameI"Capp/assets/javascripts/builder/nodes/_confirm-delete-node.html;T:	nameI"'builder/nodes/_confirm-delete-node;T:logical_pathI",builder/nodes/_confirm-delete-node.html;T:content_typeI"text/ng-html;T:sourceI"‡<div class="modal-header">
+    <h3 class="modal-title">Delete Node</h3>
+</div>
+<div class="modal-body">
+    Are you sure you want to delete the node? This cannot be undone. You will be taken back to the start node.
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Qfile-digest://app/assets/javascripts/builder/nodes/_confirm-delete-node.html;TTF:charsetI"
+utf-8;F:digest"%aõT#Oì•°L_k¤Áa"¢Ã½R¿VUØ¦ßä¯¶:lengthi‡:dependencies_digest"%îÏªŠh)KÂÔ­şš£¤Hyæ¢,,v»{¢àş1Ö=`:idI"Ebdbf48b66b534a76bcb6aeac83b6cdd6e9e0a37516129c07891fc62d40029156;F:
+mtimel+şV”X

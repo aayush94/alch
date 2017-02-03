@@ -1,0 +1,53 @@
+{:uriI"‡file://app/assets/javascripts/player/_player.html?type=text/ng-html&id=0f39f56e64bf772dd8c79ad8ef6b6861a4244a1e091c4907b7ff4dd9559edbbb:ET:load_pathI"app/assets/javascripts;T:filenameI"/app/assets/javascripts/player/_player.html;T:	nameI"player/_player;T:logical_pathI"player/_player.html;T:content_typeI"text/ng-html;T:sourceI"û<div class="player-header page-header">
+  <h5>{{session.showing.course.title}}</h5>
+  <h3>{{session.showing.display_name}}</h3>
+  <hr class="visible-xs-block">
+  <p class="visible-xs-block">Attempts Left &mdash; {{session.attempts_remaining}}</p>
+</div>
+
+<div class="row player-card">
+  <div class="col-sm-8 col-sm-offset-2" ng-switch on="session.status">
+
+    <div class="panel panel-default" ng-switch-when="failed">
+      <failure-screen></failure-screen>
+    </div>
+
+    <div class="panel" ng-switch-default>
+      <div class="panel-body">
+        <img class="player-card-img img-responsive" ng-show="session.node.asset.image" src="{{session.node.asset.image}}">
+        <h3>{{session.node.title}}</h3>
+        <p>{{session.node.body}}</p>
+      </div>
+
+      <ul class="list-group">
+        <li ng-repeat="choice in choices" class="list-group-item"><button type="button" class="btn btn-default btn-md btn-block" ng-click="makeDecision(choice.to_node_id)">{{choice.text}}</button>
+        </li>
+      </ul>
+    </div>
+
+    <button ng-show="session.node.is_failure && session.status != 'failed'" type="button" class="btn btn-warning btn-lg btn-block" ng-click="restart(session.id)">
+      <span class="glyphicon glyphicon-repeat"></span> Restart</button>
+
+    <button ng-show="session.node.is_goal && session.showing.is_graded && !currentUser.isInstructor" type="button" class="btn btn-success btn-lg btn-block" ng-click="goToResults(session.id)"><span class="glyphicon glyphicon-ok"></span> Show Results</button>
+
+    <button ng-show="session.node.is_goal && (!session.showing.is_graded || currentUser.isInstructor)"type="button" class="btn btn-warning btn-lg btn-block" ng-click="restart(session.id)"> <span class="glyphicon glyphicon-repeat"></span> Restart</button>
+
+    <button ng-show="session.node.is_goal && !session.showing.is_graded" type="button" class="btn btn-warning btn-lg btn-block" ng-click="goToCourses(session.showing.course.id)"> Back to Dashboard</button>
+
+  </div>
+
+  <div class="col-xs-2 hidden-xs" ng-hide="currentUser.isInstructor || !session.showing.is_graded" ng-show="session.showing.is_graded">
+    <div class="attempts-count" >
+      <p class="count">{{session.attempts_remaining}}</p>
+      <hr/>
+      <p class="desc">Attempts Left</p>
+    </div>
+  </div>
+
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"=file-digest://app/assets/javascripts/player/_player.html;TTF:charsetI"
+utf-8;F:digest"%VÔsãs:ÂêèWÿ«ze¬ìÑä:nìÛ¥‰ËQ*¼:lengthiû:dependencies_digest"%ò›õãa–ohaıÿ7]àìn<"*±µo«ö7
+E:idI"E0f39f56e64bf772dd8c79ad8ef6b6861a4244a1e091c4907b7ff4dd9559edbbb;F:
+mtimel+şV”X
