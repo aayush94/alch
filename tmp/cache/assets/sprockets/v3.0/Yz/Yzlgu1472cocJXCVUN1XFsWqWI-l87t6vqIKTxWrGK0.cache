@@ -1,61 +1,0 @@
-{:uriI"çfile://app/assets/templates/nodes/_build-node-form.html?type=text/ng-html&id=00ec5b90c8f959c89750f22bfd52da7bb0e19d51c2ac5064558d25800da2ad85:ET:load_pathI"app/assets/templates;T:filenameI"5app/assets/templates/nodes/_build-node-form.html;T:	nameI"nodes/_build-node-form;T:logical_pathI" nodes/_build-node-form.html;T:content_typeI"text/ng-html;T:sourceI"¥<form>
-
-<div class="row">
-    <div class="col-sm-6">
-
-      <div class="form-group">
-        <div class="empty-img" ng-click="openImageModal()" ng-show="!node.asset">
-          <p><span class="glyphicon glyphicon-picture"></span> Add Picture</p>
-        </div>
-
-        <div class="node-img-wrap" ng-show="node.asset">
-          <button class="btn btn-danger delete-img" ng-click="removeImage(node)">
-            <span>&times; <small>Remove</small></span>
-          </button>
-          <img ng-click="openImageModal()" ng-src="{{node.asset.image}}" class="img-responsive">
-        </div>
-      </div>
-
-      <div class="form-group" ng-hide="{{node.is_start}}">
-          <strong>Node Type:</strong>
-          <input type="radio" ng-model="node.type" id="regular" value="regular" name="nodeTypeGroup" ng-click="updateNodeType(node)"> <label for="regular" class="node-type-btn">Regular</label>
-          <input type="radio" ng-model="node.type" id="goal" value="goal" name="nodeTypeGroup" ng-click="updateNodeType(node)"> <label for="goal" class="node-type-btn">Goal</label>
-          <input type="radio" ng-model="node.type" id="failure" value="failure" name="nodeTypeGroup" ng-click="updateNodeType(node)"> <label for="failure" class="node-type-btn">Failure</label>
-      </div>
-
-      <div class="form-group">
-        <strong>Requires Justification:</strong> <input type="checkbox" ng-click="updateNode(node, fields.justification)" ng-model="node.requires_justification">
-      </div>
-
-    </div>
-
-    <div class="col-sm-6">
-
-      <div class="form-group">
-        <label for="node-title">Title</label>
-        <input type="text" class="form-control" id="node-title" ng-blur="updateNode(node, fields.title)" ng-model="node.title" placeholder="Title" value="node.title" required>
-      </div>
-
-      <div class="form-group">
-        <label for="node-desc">Body</label>
-        <textarea type="text" class="node-desc form-control" id="node-desc" ng-blur="updateNode(node, fields.body)" ng-model="node.body" placeholder="Body" value="node.body" required></textarea>
-      </div>
-
-    </div>
-
-  </div><!-- /row -->
-
-  <div class="row">
-    <div class="col-xs-12">
-
-      <node-choices></node-choices>
-
-    </div>
-  </div>
-
-</form>
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Cfile-digest://app/assets/templates/nodes/_build-node-form.html;TTF:charsetI"
-utf-8;F:digest"%úÃ\ì„™}Ä"’ÁBçÚKõà·Sø-;’ºèáﬁà>:lengthi¥:dependencies_digest"%’r≠án˜£±‡–ñ:l›DOù7Çï‚V◊Êë#FÖ∑h:idI"E00ec5b90c8f959c89750f22bfd52da7bb0e19d51c2ac5064558d25800da2ad85;F:
-mtimel+d?tW

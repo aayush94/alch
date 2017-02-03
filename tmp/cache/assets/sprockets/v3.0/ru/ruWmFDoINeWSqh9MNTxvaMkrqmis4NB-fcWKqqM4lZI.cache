@@ -1,0 +1,22 @@
+{:uriI"”file://app/assets/javascripts/player/_justification-modal.html?type=text/ng-html&id=181070d8131f83d6b6d07896b26bd59983604d8ea372b07a4778b0cfb5352a3a:ET:load_pathI"app/assets/javascripts;T:filenameI"<app/assets/javascripts/player/_justification-modal.html;T:	nameI" player/_justification-modal;T:logical_pathI"%player/_justification-modal.html;T:content_typeI"text/ng-html;T:sourceI"
+<div class="modal-header">
+    <h4 class="modal-title">Justify Your Decision</h4>
+</div>
+
+<div class="modal-body">
+  <form name="justForm">
+  <div class="form-group">
+    <p>Please provide a brief justification as to why you made this choice. <small>(Max 1000 characters)</small></p>
+    <textarea class="form-control" id="justification" name="justification" rows="5" placeholder="Justification...(Min 5 Characters)" ng-required="true" ng-minlength="5" ng-maxlength="1000" ng-model="newJustification">{{newJustification}}</textarea>
+  </div>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-warning" ng-disabled="!justForm.justification.$valid" ng-click="ok(newJustification)">Submit</button>
+    <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+</div>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"8processors:type=text/ng-html&file_type=text/ng-html;TTI"Jfile-digest://app/assets/javascripts/player/_justification-modal.html;TTF:charsetI"
+utf-8;F:digest"%¿'Df«w¢°,_—äÈ4šÒÑD?c1™nTe-¨–xÞ:lengthi:dependencies_digest"%'¥#ÈZó¦‘1;·”i¦“ç›ïe“ßi«æmÈJuš$ª:idI"E181070d8131f83d6b6d07896b26bd59983604d8ea372b07a4778b0cfb5352a3a;F:
+mtimel+S_”X

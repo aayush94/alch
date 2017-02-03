@@ -15,12 +15,6 @@ alchemy.controller("AuthController", ['$rootScope', '$scope', '$state', '$stateP
     });
   };
   
-  $scope.forgot = function() {
-    Auth.sendResetPasswordInstructions($scope.user);
-    //.then(function() {
-      //$state.go('loginForm');
-   // });
-};
   $scope.signup = function() {
 
     $scope.user.university_id = $scope.universities.selected.id;

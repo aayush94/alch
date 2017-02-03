@@ -13,7 +13,7 @@
     <li ng-class="{active: isActive('/login')}" ng-hide="signedIn()"><a href="#/login">Login / Sign Up</a></li>
     <!-- end -->
 
-  
+    <li ng-show="signedIn()"> <a><strong>{{ currentUser.username }}</strong></a></li>
     <li ng-class="{active: isActive('/dashboard')}" ng-show="signedIn()"><a href="#/dashboard">Dashboard</a></li>
     <li ng-class="{active: isActive('/reporting')}" ng-show="currentUser.isInstructor"><a href="#/reporting">Reporting</a></li>
     <li ng-class="{active: isActive('/builder')}" ng-show="currentUser.isInstructor"><a href="#/builder">Scenario Builder</a></li>
